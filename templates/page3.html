@@ -1,0 +1,22 @@
+<div>
+  <h2>Page3</h2>
+
+  <script type="text/javascript">
+
+    app.page("page3", function(){
+
+      var $section = document.getElementById('page3');
+      var i = 0;
+
+      return function(params){
+          i++;
+          var $div = document.createElement('div');
+          $div.innerHTML = 'hello ' + i;
+          $section.appendChild($div);
+      }
+    });//# sourceURL=page3.js
+
+  </script>
+
+
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My tiny app</title>
+    <link rel="stylesheet" href="css/app.css" media="screen" title="no title">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="topnav" id="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="#page1">Page1</a></li>
+          <li><a href="#page2">Page2</a></li>
+          <li><a href="#page3">Page3</a></li>
+        </ul>
+      </nav>
+  </header>
+    <section id="page1" default>
+      <h2>Page1</h2>
+
+      <input type="text" name="name"/>
+      <button id="ok">ok</button>
+      <div class="">
+        <a href="#page2:kikou_from_html">link to page2 </a>
+      </div>
+    </section>
+
+    <section id="page2">
+      <h2>Page2</h2>
+      <p id="result"></p>
+      <a href="#page3">link to page3 template</a>
+    </section>
+
+    <section id="page3" src="templates/page3.html"></section>
+
+
+
+    <script src="js/spapp.js"></script>
+    <script src="js/page1.js"></script>
+    <script src="js/page2.js"></script>
+  </body>
+</html>
