@@ -18,18 +18,18 @@
   </header>
     <section id="page1" default>
       <h2>Page1</h2>
-
-      <input type="text" name="name"/>
-      <button id="ok">ok</button>
-      <div class="">
-        <a href="#page2:kikou_from_html">link to page2 </a>
-      </div>
+      <form>
+        <input type="text" name="name"/>
+        <button id="ok">ok</button>
+      </form>
+      <a href="#page2:hello">call to page2 template with a param</a>
     </section>
 
     <section id="page2">
       <h2>Page2</h2>
+      <h3>Result from page1:</h3>
       <p id="result"></p>
-      <a href="#page3">link to page3 template</a>
+
     </section>
 
     <section id="page3" src="templates/page3.html"></section>
