@@ -2,7 +2,6 @@
 body {
   margin:0;
   font-family: Verdana,sans-serif;
-  background-color: #F5F5F5;
   font-size: 14px;
 }
 
@@ -21,10 +20,13 @@ body > section {
   display:none;
 }
 
+body.home > section#home,
 body.page1 > section#page1,
 body.page2  > section#page2,
 body.page3  > section#page3 { display:block; }
+
 /* nav highlightion rules */
+body.home #menu a[href="#home"],
 body.page1 #menu a[href="#page1"],
 body.page2 #menu a[href="#page2"],
 body.page3 #menu a[href="#page3"] { background-color: #555; }

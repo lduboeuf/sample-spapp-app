@@ -5,7 +5,9 @@ app.page("page2", function(){
 
   return function(params){
     if (params){
-      $result.innerHTML = params;
+      $result.innerHTML = 'from page1:' + params;
+    }else{
+      $result.innerHTML = 'hi there';
     }
 
   }
