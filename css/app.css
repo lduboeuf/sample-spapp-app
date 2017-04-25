@@ -102,7 +102,6 @@ ul.topnav li.icon {
 
 @media screen and (max-width:680px) {
   ul.topnav {
-    position: absolute;
     width:100%;
     top: 0;
   }
