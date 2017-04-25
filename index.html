@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>My tiny app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css" media="screen" title="no title">
   </head>
   <body>
     <header>
-      <nav>
         <ul class="topnav" id="menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#page1">Page1</a></li>
           <li><a href="#page2">Page2</a></li>
           <li><a href="#page3">Page3</a></li>
+          <li class="icon">
+             <a href="javascript:void(0);">&#9776;</a>
+          </li>
         </ul>
-      </nav>
   </header>
     <section id="home" default>
       <p>Hello, this is a sample spa application built with <a href="https://github.com/c-smile/spapp">spapp.js</a> </p>
@@ -37,7 +39,33 @@
     </section>
 
     <section id="page3" src="templates/page3.html"></section>
+    <script type="text/javascript">
 
+    var $menu = document.getElementById("menu");
+    var $menu_icon = $menu.querySelector('.icon > a');
+    //menu for mobile click handler
+
+
+    function cleanUI(evt) {
+      //toggle menu when a menu item is clicked
+      if (evt.target.parentNode.className!=='icon'){
+        document.getElementById("menu").className = "topnav";
+        window.removeEventListener('click', cleanUI);
+      }
+    }
+
+
+    function toggleMenu() {
+        if ($menu.className === "topnav") {
+            $menu.className += " responsive";
+            //handle click outside menu to toggle it
+            window.addEventListener('click', cleanUI);
+        } else {
+            $menu.className = "topnav";
+        }
+    }
+    $menu_icon.onclick = toggleMenu;
+    </script>
 
 
     <script src="js/spapp.js"></script>
